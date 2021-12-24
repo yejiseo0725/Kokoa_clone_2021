@@ -1,41 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>The Yeji Times</title>
-    <link href="styles.css" rel="stylesheet" />
-
-<style>
-    body {
-        display: flex;
-        height: 100vh;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-    }
-    div {
-        background-color: teal;
-        width: 200px;
-        height: 200px;
-    }
-    @media screen and (min-width: 600px) and (max-width: 1200px) and (orientation: landscape){
-        div {
-            background-color: wheat;
-        }
-    }
-    span {
-        font-size: 36px;
-    }
-    @media screen and (orientation: landscape) {
-        span {
-            display: none;
-        }
-    }
-</style>
+    <title>Welcome to Kokoa Talk</title>
 </head>
-
 <body>
-    <div></div>
-    <span>please flip your phone</span>
+    <div id="status-bar">
+        <div class="status-bar__column">
+            <span>No service</span>
+            <i class="fas fa-wifi"></i>
+        </div>
+        <div class="status-bar__column">
+            <span>18:43</span>
+        </div>
+        <div class="status-bar__column">
+            <span>110%</span>
+            <i class="fas fa-battery-three-quarters"></i>
+            <i class="fas fa-candy-cane"></i>
+        </div>
+    </div>
+        <script src="https://kit.fontawesome.com/6478f529f2.js"
+        crossorigin="anonymous"></script>
 </body>
+</html>
