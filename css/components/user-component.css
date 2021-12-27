@@ -18,6 +18,7 @@
 
 .user-component {
     justify-content: space-between;
+    margin-bottom: 15px;
 }
 
 .user-component,
@@ -30,6 +31,7 @@
     width: 70px;
     height: 70px;
     border-radius: 30px;
+    margin-bottom: 10px;
 }
 
 .user-component__avatar--xl {
@@ -60,4 +62,8 @@
     margin-top: 10px;
     display: block;
     color: rgba(0, 0, 0, 0.4);
+}
+
+.user-component__bar {
+    border-bottom: var(--side-border);
 }

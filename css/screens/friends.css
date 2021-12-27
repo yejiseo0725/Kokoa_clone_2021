@@ -20,7 +20,7 @@
 
 .friends-screen__channel {
     margin-top: 24px;
-    border-top: 2px solid var(--cheesepink);
+    border-top: var(--main-border);
     opacity: 0.5;
     padding-top: 13px;
 }

@@ -3,4 +3,7 @@
     --mustard: rgb(255, 219, 88);
     --cheesepink: #FF8868;
     --horizontal-space: 25px;
+    --main-border: 2px solid var(--cheesepink);
+    --side-border: 2px dashed rgba(0, 0, 0, 0.3);
+    --gray: rgba(0, 0, 0, 0.5); font-weight: 600;
 }
