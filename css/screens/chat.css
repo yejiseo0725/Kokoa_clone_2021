@@ -34,4 +34,59 @@
     padding: 15px;
     border-radius: 25px;
     font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.message-row {
+    width: 100%;
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.message-row img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.message__author {
+    margin-bottom: 5px;
+    display: block;
+}
+
+.message__bubble {
+    background-color: white;
+    padding: 10px;
+    border-radius: 16px;
+    border-top-left-radius: 0px;
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.message__time,
+.message__author {
+    opacity: 0.5;
+    font-size: 13px;
+}
+
+.message__info {
+    display: flex;
+    align-items: flex-end;
+}
+
+.message-row--own {
+    justify-content: flex-end;
+}
+
+.message-row--own .message__bubble {
+    background-color: var(--mustard);
+    border-top-right-radius: 0px;
+    border-top-left-radius: 16px;
+    margin-right: 0px;
+    margin-left: 5px;
+}
+
+.message-row--own .message__info {
+    flex-direction: row-reverse;
 }
