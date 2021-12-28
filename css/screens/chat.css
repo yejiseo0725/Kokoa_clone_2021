@@ -1,6 +1,6 @@
 #chat-screen {
     background-color: #B3CEE5;
-    height: 1000vh;
+    height: 500vh;
 }
 
 #chat-screen .alt-header,
@@ -21,11 +21,23 @@
     z-index: 1;
 }
 
+@keyframes fadeIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: none;
+        opacity: 1;
+    }
+}
+
 .main-chat {
-    margin-top: 120px;
+    margin-top: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: fadeIn 0.8s linear;
 }
 
 .chat__timestamp {
@@ -101,6 +113,11 @@
     padding: 5px 25px;
     align-items: center;
     box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+.reply__column {
+    padding-right: -30px;
 }
 
 .reply .reply__column:first-child {
@@ -112,42 +129,61 @@
     position: relative;
 }
 
+.reply i {
+    opacity: 0.5;
+}
+
 .reply input {
     padding: 10px;
     width: 100%;
     border: var(--main-border);
     border-radius: 20px;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
 }
 
 .reply__column:last-child > i,
 .reply__column:last-child button {
-    position: absolute;
-    top: 2px;
-    right: -20px;
+  position: absolute;
+  right: 3px;
+  top: 5px;
 }
-
 .reply__column:last-child > i {
-    right: 40px;
-    top: 10px;
+  right: 50px;
+  top: 12px;
 }
-
-.reply i {
-    opacity: 0.5;
-}
-
 .reply__column button {
-    background-color: var(--cheesepink);
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 20px;
+  background-color: var(--cheesepink);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
-
 .reply__column button i {
-    opacity: 1;
+  opacity: 1;
 }
-
 .reply__column button:focus,
 .reply__column button:active {
-    outline: none;
+  outline: none;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-kiss-wink-heart,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-kiss-wink-heart,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply:focus-within input {
+  width: 98vw;
+  transform: translateX(-13%) translateY(-80px);
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
 }
